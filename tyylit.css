@@ -1,0 +1,229 @@
+
+canvas{
+    z-index: 120;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;  
+}
+
+	
+	#pingviinieka {
+	position: absolute;
+    left: 0%;
+    top: 0%;
+    animation-name: pinguLoopeka;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    z-index: 5;
+	width:150px;
+    height:150px;
+
+}
+	
+	@keyframes pinguLoopeka {
+    from {
+        left: 0%;
+        top: 0%;
+    }
+    25% {
+        left: calc(100% - 50%);
+        top: calc(100% - 14%);
+    }
+    50% {
+        left: 93%;
+        top: 0%;
+
+    }
+    75% {
+        left: calc(100% - 50%);
+        top: calc(100% - 14%);
+    }
+    to {
+        left: 0%;
+        top: 0%;
+    }
+}
+
+	#pingviinitoka {
+	position: absolute;
+    right: 0%;
+    bottom: 0%;
+    animation-name: pinguLooptoka;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+	z-index: 5;
+	width:150px;
+    height:150px;
+}
+
+
+	@keyframes pinguLooptoka {
+    from {
+        right: 0%;
+        bottom: 0%;
+    }
+    25% {
+        right: calc(100% - 50%);
+        bottom: calc(100% - 14%);
+    }
+    50% {
+       right: 93%;
+        bottom: 0%;
+
+    }
+    75% {
+        right: calc(100% - 50%);
+        bottom: calc(100% - 14%);
+    }
+    to {
+        right: 0%;
+        bottom: 0%;
+    }
+}
+
+
+
+
+.palkki {
+	background: black;
+	border: none;
+	outline: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 10%;
+    height: 100%;
+	animation: palkkiLoop;
+    animation-direction: normal;
+    animation-duration: 12s;
+	animation-timing-function: cubic-bezier(.48,.98,.55,1);
+	animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    z-index: 100;
+
+}
+
+
+
+@keyframes palkkiLoop {
+  0%   {background: linear-gradient(to right,black,#33e3ff,black); left:-20%; top:0px;}
+  25%  {background: linear-gradient(to right,black,#33e3ff,black);left:110%; top:0px;}
+  50%  {background: linear-gradient(to right,black,green,black);left:110%; top:0px; } 
+  75% {background: linear-gradient(to right,black,green,black);left:-20%; top:0px; } 
+  100% {background: linear-gradient(to right,black,#33e3ff,black);left:-10%; top:0px;}
+}
+	
+
+
+#pöllö {
+display: none;
+}
+
+	
+
+#canvas1 {
+	width: 280px;
+	height: 160px;
+	position: absolute;
+	left: calc(50% -200px);
+	top: calc(50% -50px);
+	animation-name: vasenYläPöllö;
+	animation-duration: 5s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+
+
+#canvas2 {
+	width: 280px;
+	height: 160px;
+	position: absolute;
+	left: 50%;
+	top: calc(50% -50px);
+	animation-name: oikeaYläPöllö;
+	animation-duration: 5s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+
+
+#canvas3 {
+	width: 280px;
+	height: 160px;
+	position: absolute;
+	left: calc(50% - 250px);
+	bottom: calc(50% - 100px);
+	animation-name: vasenAlaPöllö;
+	animation-duration: 5s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+
+
+#canvas4 {
+	width: 280px;
+	height: 160px;
+	position: absolute;
+	left: 50%;
+	bottom: calc(50% - 100px);
+	animation-name: oikeaAlaPöllö;
+	animation-duration: 5s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.25,0.1,0.25,1);
+}
+
+
+@keyframes vasenYläPöllö {
+    from {
+        left: 0%;
+        top: 0;
+    }
+    to {
+       left: calc(50% - 116px);
+        top: calc(50% - 190px);
+    }
+}
+
+
+
+@keyframes oikeaYläPöllö{
+    from {
+        left: 94%;
+        top: 0;
+    }
+    to {
+        left: 50%;
+        top:calc(50% - 190px);
+    }
+}
+
+
+@keyframes vasenAlaPöllö {
+    from {
+        left: 0%;
+        bottom: 0%;
+    }
+    to {
+       left: calc(50% - 116px);
+        bottom: calc(50% - 100px);
+    }
+}
+
+
+
+@keyframes oikeaAlaPöllö {
+    from {
+       left: 94%;
+        bottom: 0%;
+    }
+    to {
+        left: 50%;
+        bottom: calc(50% - 100px);
+    }
+}
